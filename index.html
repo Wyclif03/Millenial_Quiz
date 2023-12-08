@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+    <title>Generation Quiz</title>
+</head>
+
+<body class="bg-gray-200 h-screen flex items-center justify-center">
+
+    <div class="bg-white p-8 rounded shadow-lg w-2/3 lg:w-1/2 lg:h-96 sm:h-300">
+        <h2 class="text-3xl font-semibold mb-4 text-gray-800">Which generation?</h2>
+
+        <div id="introText" class="text-gray-600">Start the quiz to find out which generation you are
+            <button class="btn border border-gray-500 px-4 py-2" id="startButton">Start</button>
+        </div>
+
+        <div>
+            <h3 id="textResults" class="text-xl text-gray-800"></h3>
+        </div>
+
+        <div id="quizContainer" class="mx-auto invisible">
+            <div>
+                <h2 class="text-xl font-semibold mb-2 text-gray-800">Question <span id="questionNumber">#</span></h2>
+                <h3 class="text-lg mb-4 text-gray-700">
+                    <span id="questionText"></span>
+                </h3>
+                <div class="flex flex-col">
+                    <div class="mb-2">
+                        <input id="buttonA" type="radio" name="question-1" class="mr-2">
+                        <label for="answerA" class="text-gray-800">
+                            <span id="answerA"></span>
+                        </label>
+                    </div>
+                    <div class="mb-2">
+                        <input id="buttonB" type="radio" name="question-1" class="mr-2">
+                        <label for="answerB" class="text-gray-800">
+                            <span id="answerB"></span>
+                        </label>
+                    </div>
+                    <div class="mb-2">
+                        <input id="buttonC" type="radio" name="question-1" class="mr-2">
+                        <label for="answerC" class="text-gray-800">
+                            <span id="answerC"></span>
+                        </label>
+                    </div>
+                    <div id="select-answer"  class="text-red-500 invisible">Please select an answer</div>
+                </div>
+            </div>
+            <button class="btn border border-gray-500 px-4 py-2 invisible" id="nextButton">Next</button>
+        </div>
+    </div>
+
+</body>
+<script type="module" src="index.js"></script>
+
+</html>
